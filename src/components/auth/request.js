@@ -1,4 +1,4 @@
-const { query } = require('../../config/database');
+const { query } = require('../../config/mysqlDatabase');
 
 async function getUsuario(email) {
   try {

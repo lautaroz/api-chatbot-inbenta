@@ -14,8 +14,8 @@ router.use(function (req, res, next) {
 });
 
 router.post("/", async (req, res) => {
-  console.log("ACA ESTA LA REQUEST", req);
-  res.status(200).json({});
+  const { challange } = req.body;
+  res.status(200).json({ challange });
 });
 
 router.post("/signup", async (req, res) => {

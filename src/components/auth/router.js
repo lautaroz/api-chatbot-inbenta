@@ -13,6 +13,11 @@ router.use(function (req, res, next) {
   next();
 });
 
+router.post("/", async (req, res) => {
+  const { challange } = req;
+  res.status(200).json(challange);
+});
+
 router.post("/signup", async (req, res) => {
   try {
     const { email, password } = req.body;

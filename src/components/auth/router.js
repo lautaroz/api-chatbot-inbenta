@@ -15,7 +15,11 @@ router.use(function (req, res, next) {
 
 router.post("/", async (req, res) => {
   const { challange } = req.body;
-  res.status(200).json({ challange });
+  res.status(200).json({
+    code: req.statusCode,
+    error: "no-error",
+    body: { challange },
+  });
 });
 
 router.post("/signup", async (req, res) => {
